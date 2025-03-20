@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModelVerse - Premium 3D Asset Marketplace</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="stor.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-cube"></i> <span>ModelVerse</span>
+            </a>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Explore</a>
+                <a href="#">Collections</a>
+                <a href="#">Sell</a>
+                <a href="#">Learn</a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search 3D models, collections, artists..." id="searchInput">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="#" title="Notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </a>
+                <a href="#" title="Wishlist"><i class="fas fa-heart"></i></a>
+                <a href="#" title="Cart"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#" title="Account"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="hero">
+            <h1>Discover Premium 3D Models</h1>
+            <p>Access thousands of high-quality, ready-to-use 3D assets created by world-class artists for your games, films, VR, and visualization projects.</p>
+            <div class="hero-cta">
+                <a href="#" class="btn btn-primary">Explore Models</a>
+                <a href="#" class="btn btn-outline">Become a Creator</a>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <h2 class="section-title">Featured Collections</h2>
+            <div class="featured-slider">
+                <div class="slider-container" id="featuredSlider">
+                    <div class="featured-card">
+                        <img src="/api/placeholder/350/250" class="featured-img" alt="Sci-Fi Environment Pack">
+                        <div class="featured-overlay">
+                            <h3 class="featured-title">Sci-Fi Environment Pack</h3>
+                            <div class="featured-artist">
+                                <img src="/api/placeholder/30/30" class="artist-avatar" alt="Artist">
+                                <span>by ArtStation Pro</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-card">
+                        <img src="/api/placeholder/350/250?2" class="featured-img" alt="Fantasy Characters">
+                        <div class="featured-overlay">
+                            <h3 class="featured-title">Fantasy Characters Bundle</h3>
+                            <div class="featured-artist">
+                                <img src="/api/placeholder/30/30?2" class="artist-avatar" alt="Artist">
+                                <span>by Creative Minds</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-card">
+                        <img src="/api/placeholder/350/250?3" class="featured-img" alt="Architecture Assets">
+                        <div class="featured-overlay">
+                            <h3 class="featured-title">Modern Architecture Assets</h3>
+                            <div class="featured-artist">
+                                <img src="/api/placeholder/30/30?3" class="artist-avatar" alt="Artist">
+                                <span>by Urban Designers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-card">
+                        <img src="/api/placeholder/350/250?4" class="featured-img" alt="Vehicle Collection">
+                        <div class="featured-overlay">
+                            <h3 class="featured-title">Futuristic Vehicle Collection</h3>
+                            <div class="featured-artist">
+                                <img src="/api/placeholder/30/30?4" class="artist-avatar" alt="Artist">
+                                <span>by MechDesigns</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-card">
+                        <img src="/api/placeholder/350/250?5" class="featured-img" alt="Nature Pack">
+                        <div class="featured-overlay">
+                            <h3 class="featured-title">Realistic Nature Pack</h3>
+                            <div class="featured-artist">
+                                <img src="/api/placeholder/30/30?5" class="artist-avatar" alt="Artist">
+                                <span>by Wilderness Studio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn" id="sliderPrev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn" id="sliderNext"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <h2 class="section-title">Browse Categories</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-building"></i></div>
+                    <h3 class="category-name">Architecture</h3>
+                    <div class="category-count">1,245 models</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-car"></i></div>
+                    <h3 class="category-name">Vehicles</h3>
+                    <div class="category-count">892 models</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-tree"></i></div>
+                    <h3 class="category-name">Nature</h3>
+                    <div class="category-count">756 models</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-user-astronaut"></i></div>
+                    <h3 class="category-name">Characters</h3>
+                    <div class="category-count">1,023 models</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-rocket"></i></div>
+                    <h3 class="category-name">Sci-Fi</h3>
+                    <div class="category-count">678 models</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-dragon"></i></div>
+                    <h3 class="category-name">Fantasy</h3>
+                    <div class="category-count">542 models</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="models-section">
+            <h2 class="section-title">Popular Models</h2>
+            
+            <div class="filter-bar">
+                <div class="filter-section">
+                    <span class="filter-label">Sort by:</span>
+                    <select class="filter-select" id="sortSelect">
+                        <option value="popular">Most Popular</option>
+                        <option value="recent">Recently Added</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+                <div class="filter-section">
+                    <span class="filter-label">Price:</span>
+                    <div class="filter-tag active">All</div>
+                    <div class="filter-tag">Free</div>
+                    <div class="filter-tag">Premium</div>
+                </div>
+                <div class="filter-section">
+                    <span class="filter-label">Format:</span>
+                    <select class="filter-select" id="formatSelect">
+                        <option value="all">All Formats</option>
+                        <option value="fbx">FBX</option>
+                        <option value="obj">OBJ</option>
+                        <option value="gltf">glTF</option>
+                        <option value="blend">Blender</option>
+                        <option value="max">3ds Max</option>
+                        <option value="c4d">Cinema 4D</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="models-grid" id="modelsGrid">
+                <!-- Models will be dynamically loaded here -->
+            </div>
+            
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">5</button>
+                <button class="page-btn"><i class="fas fa-ellipsis-h"></i></button>
+                <button class="page-btn">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <h2>Start Creating Amazing 3D Projects Today</h2>
+            <p>Join thousands of designers, artists, and developers who use ModelVerse to bring their visions to life.</p>
+            <a href="#" class="btn btn-accent">Sign Up Now - Free Account</a>
+        </section>
+    </main>
+
+    <!-- Model Viewer Modal -->
+    <div class="model-viewer-container" id="modelViewer">
+        <button class="close-viewer" id="closeViewer"><i class="fas fa-times"></i></button>
+        <div class="model-viewer">
+            <div class="viewer-main">
+                <iframe id="sketchfabViewer" class="viewer-iframe" title="3D Model Viewer" frameborder="0" allowfullscreen allow="autoplay; fullscreen; xr-spatial-tracking" ></iframe>
+                <div class="viewer-controls">
+                    <button title="Reset Camera"><i class="fas fa-sync-alt"></i></button>
+                    <button title="Wireframe"><i class="fas fa-vector-square"></i></button>
+                    <button title="Fullscreen"><i class="fas fa-expand"></i></button>
+                </div>
+            </div>
+            <div class="viewer-sidebar">
+                <h2 id="modelTitle">Model Title</h2>
+                <div class="model-tags" id="modelTags">
+                    <!-- Tags will be added dynamically -->
+                </div>
+                <div class="model-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Format</span>
+                        <span class="detail-value" id="modelFormat">FBX, OBJ, Blender</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Polygons</span>
+                        <span class="detail-value" id="modelPolygons">24.5K</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Textures</span>
+                        <span class="detail-value" id="modelTextures">4K PBR</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Rigged</span>
+                        <span class="detail-value" id="modelRigged">Yes</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Animation</span>
+                        <span class="detail-value" id="modelAnimation">Yes (12 animations)</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">License</span>
+                        <span class="detail-value" id="modelLicense">Standard</span>
+                    </div>
+                </div>
+                <div class="model-description" id="modelDescription">
+                    <!-- Description will be added dynamically -->
+                </div>
+                <div class="artist-section">
+                    <img src="/api/placeholder/60/60" class="artist-avatar-lg" alt="Artist">
+                    <div class="artist-info">
+                        <h3 id="artistName">Artist Name</h3>
+                        <p>3D Artist & Designer</p>
+                    </div>
+                </div>
+                <div class="price-section">
+                    <div class="price-display" id="modelPrice">$49.99</div>
+                    <div class="model-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star-half-alt star"></i>
+                        <span>(127)</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary btn-block">Add to Cart</button>
+                    <button class="btn btn-outline wishlist-btn" title="Add to Wishlist">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                <div class="review-section">
+                    <div class="review-header">
+                        <h3>Reviews</h3>
+                        <span class="review-count">127 reviews</span>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-top">
+                            <div class="review-user">
+                                <img src="/api/placeholder/30/30?r1" class="review-avatar" alt="User">
+                                <span>John D.</span>
+                            </div>
+                            <div class="review-date">2 days ago</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                        <p>Excellent model with great attention to detail. Animations are smooth and the textures are top-notch.</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-top">
+                            <div class="review-user">
+                                <img src="/api/placeholder/30/30?r2" class="review-avatar" alt="User">
+                                <span>Maya T.</span>
+                            </div>
+                            <div class="review-date">1 week ago</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="far fa-star star"></i>
+                        </div>
+                        <p>Very high quality model that imported perfectly into my project. Documentation could be better.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>ModelVerse</h3>
+                <p>Premium marketplace for high-quality 3D models, textures, and animations for all your creative projects.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <div class="footer-links">
+                    <a href="#">Blog</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">Documentation</a>
+                    <a href="#">Community</a>
+                    <a href="#">Asset Standards</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <div class="footer-links">
+                    <a href="#">Help Center</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Report an Issue</a>
+                    <a href="#">Request a Feature</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <div class="footer-links">
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Copyright</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 ModelVerse. All rights reserved.</p>
+        </div>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>
