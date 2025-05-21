@@ -3,418 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ModelVerse - Premium 3D Asset Marketplace</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <title>SM ENGINE - Premium Free 3D Assets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+vqungFB7bHyABLENLTKDbwTTvVRTYkvGYZrTnGUReisA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="stor.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <a href="#" class="logo">
-                <svg width="50" height="50" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Enhanced Definitions for Gradient and Glow -->
+   <header class="site-header">
+        <div class="container site-header__container">
+            <a href="https://medelbou3.github.io/SM-Engine/" class="logo logo--new-design" id="homeLinkLogo">
+                <svg class="logo__svg" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#1A1A1A;stop-opacity:1" /> <!-- Deeper metallic gray -->
-                            <stop offset="40%" style="stop-color:#3B82F6;stop-opacity:1" /> <!-- Stronger blue highlight -->
-                            <stop offset="60%" style="stop-color:#93C5FD;stop-opacity:1" /> <!-- Mid-tone blue -->
-                            <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" /> <!-- Brighter silver -->
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="var(--color-primary-dark)"/>
+                            <stop offset="100%" stop-color="var(--color-accent)"/>
                         </linearGradient>
-                        <filter id="glow">
-                            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                        <linearGradient id="logoHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="var(--color-primary)" />
+                            <stop offset="100%" stop-color="var(--color-accent-dark)" />
+                        </linearGradient>
+                         <filter id="logoGlow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+                            <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+                            <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specOut">
+                                <fePointLight x="-5000" y="-10000" z="20000"/>
+                            </feSpecularLighting>
+                            <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+                            <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
                             <feMerge>
-                                <feMergeNode in="coloredBlur"/>
-                                <feMergeNode in="SourceGraphic"/>
+                                <feMergeNode in="offsetBlur"/>
+                                <feMergeNode in="litPaint"/>
                             </feMerge>
                         </filter>
-                        <filter id="softShadow">
-                            <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.3" />
-                        </filter>
                     </defs>
-                    
-                    <!-- Dark Background Circle for Contrast -->
-                    <circle cx="75" cy="75" r="70" fill="#111827" opacity="0.8"/>
-                    
-                    <!-- Outer Orbital Frame (Enhanced) -->
-                    <circle cx="75" cy="75" r="60" 
-                        stroke="url(#grad1)" stroke-width="3.5" fill="none" stroke-linecap="round" filter="url(#glow)"/>
-                    
-                    <!-- Secondary Orbital Element -->
-                    <circle cx="75" cy="75" r="53" 
-                        stroke="url(#grad1)" stroke-width="1" fill="none" stroke-dasharray="2,4" opacity="0.7"/>
-                    
-                    <!-- Inner Stylized "S" Shape (Refined) -->
-                    <path d="M 55 45 C 40 60, 60 90, 75 105 C 90 120, 110 105, 95 90 C 80 75, 60 60, 55 45" 
-                        stroke="url(#grad1)" stroke-width="4.5" fill="none" stroke-linecap="round" filter="url(#glow)"/>
-                    
-                    <!-- Inner "M" Shape (Enhanced) -->
-                    <path d="M 65 50 L 75 70 L 85 50 M 75 70 L 75 100" 
-                        stroke="url(#grad1)" stroke-width="3.5" fill="none" stroke-linecap="round" filter="url(#glow)"/>
-                    
-                    <!-- Connection Points (Professional Touch) -->
-                    <circle cx="65" cy="50" r="3" fill="url(#grad1)" filter="url(#glow)"/>
-                    <circle cx="75" cy="70" r="3" fill="url(#grad1)" filter="url(#glow)"/>
-                    <circle cx="85" cy="50" r="3" fill="url(#grad1)" filter="url(#glow)"/>
-                    <circle cx="75" cy="100" r="3" fill="url(#grad1)" filter="url(#glow)"/>
-                    
-                    <!-- Precision Dots (Enhanced) -->
-                    <circle cx="75" cy="15" r="2.5" fill="url(#grad1)" filter="url(#glow)"/>
-                    <circle cx="75" cy="135" r="2.5" fill="url(#grad1)" filter="url(#glow)"/>
-                    <circle cx="15" cy="75" r="2.5" fill="url(#grad1)" filter="url(#glow)"/>
-                    <circle cx="135" cy="75" r="2.5" fill="url(#grad1)" filter="url(#glow)"/>
-                    
-                    <!-- SM Typography (Enhanced) -->
-                    <text x="52" y="130" font-family="Arial, sans-serif" font-size="28" 
-                        fill="url(#grad1)" font-weight="700" letter-spacing="1" filter="url(#softShadow)">SM</text>
+                    <g filter="url(#logoGlow)">
+                         <!-- Abstract cube-like M -->
+                        <path fill="url(#logoGradient)" 
+                              d="M10 60 L10 15 L20 10 L35 10 L40 15 L40 30 L30 35 L30 55 L35 60 L10 60 Z 
+                                 M40 15 L45 10 L60 10 L60 55 L55 60 L40 55 L40 15 Z" />
+                        <path fill="url(#logoHighlight)" opacity="0.6"
+                              d="M12 58 L12 17 L20 12 L35 12 L38 17 L38 30 L30 33 L30 53 L35 58 L12 58 Z 
+                                 M42 17 L45 12 L58 12 L58 53 L55 58 L42 53 L42 17 Z" />
+                    </g>
                 </svg>
+                <span class="logo__text">SM Engine<span class="logo__text-pro">TM</span></span>
             </a>
-            <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Explore</a>
-                <a href="#">Collections</a>
-                <a href="#">Sell</a>
-                <a href="#">Learn</a>
-            </div>
-            <div class="search-container">
-                <input type="text" placeholder="Search 3D models, collections, artists..." id="searchInput">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <div class="user-actions">
-                <a href="#" title="Notifications">
-                    <i class="fas fa-bell"></i>
-                    <span class="notification-badge">3</span>
+
+            <nav class="main-nav">
+                <a href="#" class="main-nav__link is-active" id="homeLinkNav">Home</a>
+                <a href="#modelsSection" class="main-nav__link" id="exploreLinkNav">Explore</a>
+                <a href="#categoriesSection" class="main-nav__link" id="categoriesLinkNav">Categories</a>
+                <a href="#" class="main-nav__link">Submit Asset</a>
+            </nav>
+
+            <form class="search-form" onsubmit="return false;">
+                <input type="text" class="search-form__input" placeholder="Search assets, e.g. 'sci-fi character'..." id="searchInput" aria-label="Search 3D Models">
+                <button class="search-form__button" aria-label="Execute Search" id="searchButton"><i class="fas fa-search"></i></button>
+            </form>
+
+            <div class="user-profile-actions">
+                <button class="user-profile-actions__button" title="My Wishlist" aria-label="View My Wishlist" id="showWishlistBtn">
+                    <i class="fas fa-heart" style="color: var(--color-text-primary);"></i>
+                    <span class="user-profile-actions__badge" id="wishlistCounter" style="display: none;">0</span>
+                </button>
+                <a href="#" class="user-profile-actions__link" title="My Account" aria-label="My Account">
+                    <i class="fas fa-user-circle"></i>
                 </a>
-                <a href="#" title="Wishlist"><i class="fas fa-heart"></i></a>
-                <a href="#" title="Cart"><i class="fas fa-shopping-cart"></i></a>
-                <a href="#" title="Account"><i class="fas fa-user"></i></a>
+                <!-- <button class="button button--primary button--sm">Sign Up</button> -->
             </div>
         </div>
     </header>
 
-    <main class="main-container">
-        <section class="hero">
-            <h1>Discover Premium 3D Models</h1>
-            <p>Access thousands of high-quality, ready-to-use 3D assets created by world-class artists for your games, films, VR, and visualization projects.</p>
-            <div class="hero-cta">
-                <a href="#" class="btn btn-primary">Explore Models</a>
-                <a href="#" class="btn btn-outline">Become a Creator</a>
-            </div>
-        </section>
-
-        <section class="featured-section">
-            <h2 class="section-title">Featured Collections</h2>
-            <div class="featured-slider">
-                <div class="slider-container" id="featuredSlider">
-                    <div class="featured-card">
-                        <img src="/api/placeholder/350/250" class="featured-img" alt="Sci-Fi Environment Pack">
-                        <div class="featured-overlay">
-                            <h3 class="featured-title">Sci-Fi Environment Pack</h3>
-                            <div class="featured-artist">
-                                <img src="/api/placeholder/30/30" class="artist-avatar" alt="Artist">
-                                <span>by ArtStation Pro</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="featured-card">
-                        <img src="/api/placeholder/350/250?2" class="featured-img" alt="Fantasy Characters">
-                        <div class="featured-overlay">
-                            <h3 class="featured-title">Fantasy Characters Bundle</h3>
-                            <div class="featured-artist">
-                                <img src="/api/placeholder/30/30?2" class="artist-avatar" alt="Artist">
-                                <span>by Creative Minds</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="featured-card">
-                        <img src="/api/placeholder/350/250?3" class="featured-img" alt="Architecture Assets">
-                        <div class="featured-overlay">
-                            <h3 class="featured-title">Modern Architecture Assets</h3>
-                            <div class="featured-artist">
-                                <img src="/api/placeholder/30/30?3" class="artist-avatar" alt="Artist">
-                                <span>by Urban Designers</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="featured-card">
-                        <img src="/api/placeholder/350/250?4" class="featured-img" alt="Vehicle Collection">
-                        <div class="featured-overlay">
-                            <h3 class="featured-title">Futuristic Vehicle Collection</h3>
-                            <div class="featured-artist">
-                                <img src="/api/placeholder/30/30?4" class="artist-avatar" alt="Artist">
-                                <span>by MechDesigns</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="featured-card">
-                        <img src="/api/placeholder/350/250?5" class="featured-img" alt="Nature Pack">
-                        <div class="featured-overlay">
-                            <h3 class="featured-title">Realistic Nature Pack</h3>
-                            <div class="featured-artist">
-                                <img src="/api/placeholder/30/30?5" class="artist-avatar" alt="Artist">
-                                <span>by Wilderness Studio</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-controls">
-                    <button class="slider-btn" id="sliderPrev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="slider-btn" id="sliderNext"><i class="fas fa-chevron-right"></i></button>
+    <main>
+        <section class="hero-section">
+            <div class="container hero-section__content">
+                <h1 class="hero-section__title">Unlock Your Creative Universe</h1>
+                <p class="hero-section__subtitle">Discover thousands of professionally-crafted, free 3D models. Ready for your games, animations, VR experiences, and architectural visualizations.</p>
+                <div class="hero-section__actions">
+                    <a href="#modelsSection" class="button button--primary button--lg">Browse All Assets</a>
+                    <a href="#" class="button button--outline button--lg">Become a Contributor</a>
                 </div>
             </div>
         </section>
 
-        <section class="categories-section">
-            <h2 class="section-title">Browse Categories</h2>
-            <div class="categories">
-                <div class="category-card">
-                    <div class="category-icon"><i class="fas fa-building"></i></div>
-                    <h3 class="category-name">Architecture</h3>
-                    <div class="category-count">1,245 models</div>
+        <section class="page-section featured-models-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-header__title">Spotlight Assets</h2>
+                    <div class="section-header__controls">
+                        <div class="slider-controls">
+                            <button class="slider-button" id="sliderPrev" aria-label="Previous Spotlight Asset"><i class="fas fa-chevron-left"></i></button>
+                            <button class="slider-button" id="sliderNext" aria-label="Next Spotlight Asset"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon"><i class="fas fa-car"></i></div>
-                    <h3 class="category-name">Vehicles</h3>
-                    <div class="category-count">892 models</div>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon"><i class="fas fa-tree"></i></div>
-                    <h3 class="category-name">Nature</h3>
-                    <div class="category-count">756 models</div>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon"><i class="fas fa-user-astronaut"></i></div>
-                    <h3 class="category-name">Characters</h3>
-                    <div class="category-count">1,023 models</div>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon"><i class="fas fa-rocket"></i></div>
-                    <h3 class="category-name">Sci-Fi</h3>
-                    <div class="category-count">678 models</div>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon"><i class="fas fa-dragon"></i></div>
-                    <h3 class="category-name">Fantasy</h3>
-                    <div class="category-count">542 models</div>
+                <div class="featured-slider__wrapper">
+                    <div class="featured-slider" id="featuredSlider">
+                         <p class="featured-slider__placeholder-message">Loading spotlight assets...</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="models-section">
-            <h2 class="section-title">Popular Models</h2>
-            
-            <div class="filter-bar">
-                <div class="filter-section">
-                    <span class="filter-label">Sort by:</span>
-                    <select class="filter-select" id="sortSelect">
-                        <option value="popular">Most Popular</option>
-                        <option value="recent">Recently Added</option>
-                        <option value="price-low">Price: Low to High</option>
-                        <option value="price-high">Price: High to Low</option>
-                        <option value="rating">Highest Rated</option>
-                    </select>
+        <section class="page-section" id="categoriesSection">
+            <div class="container">
+                <div class="section-header">
+                     <h2 class="section-header__title">Explore by Category</h2>
                 </div>
-                <div class="filter-section">
-                    <span class="filter-label">Price:</span>
-                    <div class="filter-tag active">All</div>
-                    <div class="filter-tag">Free</div>
-                    <div class="filter-tag">Premium</div>
-                </div>
-                <div class="filter-section">
-                    <span class="filter-label">Format:</span>
-                    <select class="filter-select" id="formatSelect">
-                        <option value="all">All Formats</option>
-                        <option value="fbx">FBX</option>
-                        <option value="obj">OBJ</option>
-                        <option value="gltf">glTF</option>
-                        <option value="blend">Blender</option>
-                        <option value="max">3ds Max</option>
-                        <option value="c4d">Cinema 4D</option>
-                    </select>
+                <div class="categories-grid" id="categoriesGrid">
+                    <!-- Categories will be dynamically generated if preferred, or static -->
+                    <div class="category-card" data-category="architecture" tabindex="0">
+                        <div class="category-card__icon"><i class="fas fa-university"></i></div>
+                        <h3 class="category-card__name">Architecture</h3>
+                        <div class="category-card__count">1200+ Assets</div>
+                    </div>
+                    <div class="category-card" data-category="characters" tabindex="0">
+                        <div class="category-card__icon"><i class="fas fa-users"></i></div>
+                        <h3 class="category-card__name">Characters</h3>
+                        <div class="category-card__count">950+ Assets</div>
+                    </div>
+                    <div class="category-card" data-category="vehicles" tabindex="0">
+                        <div class="category-card__icon"><i class="fas fa-space-shuttle"></i></div>
+                        <h3 class="category-card__name">Vehicles</h3>
+                        <div class="category-card__count">800+ Assets</div>
+                    </div>
+                    <div class="category-card" data-category="nature" tabindex="0">
+                        <div class="category-card__icon"><i class="fas fa-leaf"></i></div>
+                        <h3 class="category-card__name">Nature & Plants</h3>
+                        <div class="category-card__count">700+ Assets</div>
+                    </div>
+                    <div class="category-card" data-category="props" tabindex="0">
+                        <div class="category-card__icon"><i class="fas fa-magic"></i></div>
+                        <h3 class="category-card__name">Props & Items</h3>
+                        <div class="category-card__count">1500+ Assets</div>
+                    </div>
+                     <div class="category-card" data-category="sci-fi" tabindex="0">
+                        <div class="category-card__icon"><i class="fas fa-robot"></i></div>
+                        <h3 class="category-card__name">Sci-Fi</h3>
+                        <div class="category-card__count">600+ Assets</div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="models-grid" id="modelsGrid">
-                <!-- Models will be dynamically loaded here -->
-            </div>
-            
-            <div class="pagination">
-                <button class="page-btn active">1</button>
-                <button class="page-btn">2</button>
-                <button class="page-btn">3</button>
-                <button class="page-btn">4</button>
-                <button class="page-btn">5</button>
-                <button class="page-btn"><i class="fas fa-ellipsis-h"></i></button>
-                <button class="page-btn">Next <i class="fas fa-chevron-right"></i></button>
+        </section>
+
+        <section class="page-section" id="modelsSection">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-header__title" id="mainSectionTitle">Discover Free Assets</h2>
+                     <button id="clearFiltersBtn" class="button button--outline button--sm" style="display: none;"><i class="fas fa-times"></i> Clear Filters</button>
+                </div>
+                
+                <div class="filters-bar" id="filterBar">
+                    <div class="filter-group">
+                        <label for="sortSelect" class="filter-group__label">Sort by:</label>
+                        <select class="filter-select" id="sortSelect" aria-label="Sort models by">
+                            <option value="recent">-publishedAt</option> <!-- API param for recent -->
+                            <option value="popular">-viewCount</option>   <!-- API param for popular -->
+                            <option value="rating">-likeCount</option>    <!-- API param for highest rated -->
+                        </select>
+                    </div>
+                    <!-- "Price" filter might be less relevant if all are free -->
+                    <!-- <div class="filter-group">
+                        <span class="filter-group__label">Price:</span>
+                        <div class="filter-tag is-active" data-price="all">All Free</div>
+                    </div> -->
+                    <div class="filter-group">
+                        <label for="formatSelect" class="filter-group__label">Format (Hint):</label>
+                        <select class="filter-select" id="formatSelect" aria-label="Filter models by format hint">
+                            <option value="all">Any Format</option>
+                            <option value="gltf">glTF</option>
+                            <option value="fbx">FBX</option>
+                            <option value="obj">OBJ</option>
+                            <option value="blend">Blender</option>
+                            <option value="usdz">USDZ</option> <!-- Sketchfab API does provide USDZ sometimes -->
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="models-grid" id="modelsGrid">
+                    <!-- Models dynamically loaded here -->
+                </div>
+                
+                <div class="pagination-container" id="paginationContainer">
+                     <div class="pagination">
+                        <!-- Pagination buttons dynamically loaded here -->
+                     </div>
+                </div>
             </div>
         </section>
         
-        <section class="cta-section">
-            <h2>Start Creating Amazing 3D Projects Today</h2>
-            <p>Join thousands of designers, artists, and developers who use ModelVerse to bring their visions to life.</p>
-            <a href="#" class="btn btn-accent">Sign Up Now - Free Account</a>
+        <section class="cta-banner">
+            <div class="container">
+                <h2 class="cta-banner__title">Fuel Your Next Masterpiece</h2>
+                <p class="cta-banner__text">Join a vibrant community of creators. Share your work, find inspiration, and elevate your projects with high-quality, free 3D assets from ModelHub Pro.</p>
+                <a href="#" class="button button--primary button--lg">Create Free Account</a>
+            </div>
         </section>
     </main>
 
-    <!-- Model Viewer Modal -->
-    <div class="model-viewer-container" id="modelViewer">
-        <button class="close-viewer" id="closeViewer"><i class="fas fa-times"></i></button>
-        <div class="model-viewer">
-            <div class="viewer-main">
-                <iframe id="sketchfabViewer" class="viewer-iframe" title="3D Model Viewer" frameborder="0" allowfullscreen allow="autoplay; fullscreen; xr-spatial-tracking" ></iframe>
-                <div class="viewer-controls">
-                    <button title="Reset Camera"><i class="fas fa-sync-alt"></i></button>
-                    <button title="Wireframe"><i class="fas fa-vector-square"></i></button>
-                    <button title="Fullscreen"><i class="fas fa-expand"></i></button>
+    <div class="modal-overlay" id="modelViewerOverlay">
+        <div class="modal-container" id="modelViewerContainer">
+            <button class="modal__close-button" id="closeViewerBtn" aria-label="Close model viewer"><i class="fas fa-times"></i></button>
+            <div class="modal__main-content">
+                <div class="modal__viewer-area">
+                     <div class="modal__iframe-loader is-visible" id="iframeLoaderMessage"><i class="fas fa-spinner fa-spin"></i> Loading 3D Preview...</div>
+                     <iframe id="sketchfabViewer" class="modal__iframe" title="3D Model Viewer" frameborder="0" allowfullscreen allow="autoplay; fullscreen; xr-spatial-tracking; gyroscope; accelerometer; webgl"></iframe>
+                </div>
+                <div class="modal__viewer-controls">
+                    <button title="Reset Camera (API action)" aria-label="Reset Camera"><i class="fas fa-sync-alt"></i></button>
+                    <button title="Toggle Wireframe (API action)" aria-label="Toggle Wireframe"><i class="fas fa-vector-square"></i></button>
+                    <button title="Toggle Fullscreen (API action)" aria-label="Toggle Fullscreen"><i class="fas fa-expand"></i></button>
                 </div>
             </div>
-            <div class="viewer-sidebar">
-                <h2 id="modelTitle">Model Title</h2>
-                <div class="model-tags" id="modelTags">
+            <aside class="modal__sidebar">
+                <h2 class="modal__sidebar-title" id="modelTitleSidebar">Model Title</h2>
+                <div class="modal__artist-info">
+                    <img src="https://placehold.co/44x44/242A38/A0AEC0?text=A&font=lato" class="modal__artist-avatar" alt="Artist Avatar" id="modelArtistAvatarSidebar">
+                    <div class="modal__artist-details">
+                        <h4 id="modelArtistNameSidebar">Artist Name</h4>
+                        <p id="modelArtistBioSidebar">3D Generalist</p>
+                    </div>
+                </div>
+                
+                <div class="modal__stats-bar">
+                    <div class="modal__stat-item"><i class="fas fa-eye"></i> <span id="modelViewCountSidebar">0</span></div>
+                    <div class="modal__stat-item"><i class="fas fa-heart"></i> <span id="modelLikeCountSidebar">0</span></div>
+                    <div class="modal__stat-item"><i class="fas fa-file-alt"></i> <span id="modelFaceCountSidebar">0</span></div>
+                </div>
+
+                <div class="modal__tags-list" id="modelTagsSidebar">
                     <!-- Tags will be added dynamically -->
                 </div>
-                <div class="model-details">
-                    <div class="detail-item">
-                        <span class="detail-label">Format</span>
-                        <span class="detail-value" id="modelFormat">FBX, OBJ, Blender</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Polygons</span>
-                        <span class="detail-value" id="modelPolygons">24.5K</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Textures</span>
-                        <span class="detail-value" id="modelTextures">4K PBR</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Rigged</span>
-                        <span class="detail-value" id="modelRigged">Yes</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Animation</span>
-                        <span class="detail-value" id="modelAnimation">Yes (12 animations)</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">License</span>
-                        <span class="detail-value" id="modelLicense">Standard</span>
-                    </div>
-                </div>
-                <div class="model-description" id="modelDescription">
-                    <!-- Description will be added dynamically -->
-                </div>
-                <div class="artist-section">
-                    <img src="/api/placeholder/60/60" class="artist-avatar-lg" alt="Artist">
-                    <div class="artist-info">
-                        <h3 id="artistName">Artist Name</h3>
-                        <p>3D Artist & Designer</p>
-                    </div>
-                </div>
-                <div class="price-section">
-                    <div class="price-display" id="modelPrice">$49.99</div>
-                    <div class="model-rating">
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star-half-alt star"></i>
-                        <span>(127)</span>
-                    </div>
-                </div>
-                <div class="btn-group">
-                    <button class="btn btn-primary btn-block">Add to Cart</button>
-                    <button class="btn btn-outline wishlist-btn" title="Add to Wishlist">
-                        <i class="fas fa-heart"></i>
+
+                <div class="modal__action-buttons">
+                    <button class="button button--primary button--block modal__download-button" id="downloadModelBtnSidebar">
+                        <i class="fas fa-download"></i> Download Model
+                    </button>
+                    <button class="button button--outline button--block modal__wishlist-button" id="viewerWishlistBtnSidebar" aria-label="Add to Wishlist">
+                        <i class="far fa-heart"></i> <span>Add to Wishlist</span>
                     </button>
                 </div>
-                <div class="review-section">
-                    <div class="review-header">
-                        <h3>Reviews</h3>
-                        <span class="review-count">127 reviews</span>
-                    </div>
-                    <div class="review-item">
-                        <div class="review-top">
-                            <div class="review-user">
-                                <img src="/api/placeholder/30/30?r1" class="review-avatar" alt="User">
-                                <span>John D.</span>
-                            </div>
-                            <div class="review-date">2 days ago</div>
+                
+                <div class="modal__accordion">
+                    <details class="accordion__item" open>
+                        <summary class="accordion__summary">Description</summary>
+                        <div class="accordion__content accordion__content--description" id="modelDescriptionSidebar">
+                            No description available.
                         </div>
-                        <div class="review-rating">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
+                    </details>
+                    <details class="accordion__item">
+                        <summary class="accordion__summary">Technical Details</summary>
+                        <div class="accordion__content">
+                            <ul id="technicalDetailsListSidebar">
+                                <li><strong>Formats:</strong> <span id="modelFormatsSidebar">Unavailable</span></li>
+                                <li><strong>Vertices:</strong> <span id="modelVertexCountSidebar">Unavailable</span></li>
+                                <li><strong>Rigged:</strong> <span id="modelRiggedSidebar">Unavailable</span></li>
+                                <li><strong>Animated:</strong> <span id="modelAnimatedSidebar">Unavailable</span></li>
+                                <li><strong>License:</strong> <span id="modelLicenseSidebar">Check Source</span></li>
+                            </ul>
                         </div>
-                        <p>Excellent model with great attention to detail. Animations are smooth and the textures are top-notch.</p>
-                    </div>
-                    <div class="review-item">
-                        <div class="review-top">
-                            <div class="review-user">
-                                <img src="/api/placeholder/30/30?r2" class="review-avatar" alt="User">
-                                <span>Maya T.</span>
-                            </div>
-                            <div class="review-date">1 week ago</div>
-                        </div>
-                        <div class="review-rating">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="far fa-star star"></i>
-                        </div>
-                        <p>Very high quality model that imported perfectly into my project. Documentation could be better.</p>
+                    </details>
+                </div>
+
+                <div class="modal__reviews-section">
+                    <h4 class="modal__reviews-title">User Reviews (<span id="reviewCountSidebar">0</span>)</h4>
+                    <div class="reviews-list" id="reviewsListSidebar">
+                        <p class="modal__reviews-placeholder">No reviews yet for this asset.</p>
                     </div>
                 </div>
-            </div>
+            </aside>
         </div>
     </div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>ModelVerse</h3>
-                <p>Premium marketplace for high-quality 3D models, textures, and animations for all your creative projects.</p>
-                <div class="footer-social">
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+    <footer class="site-footer">
+        <div class="container site-footer__container">
+            <div class="site-footer__column site-footer__about">
+                <h3 class="site-footer__heading">ModelHub Pro</h3>
+                <p class="site-footer__text">Your premier destination for high-quality, free 3D assets. Empowering creators with the tools to build breathtaking digital experiences.</p>
+                <div class="social-links">
+                    <a href="#" class="social-links__icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-links__icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-links__icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-links__icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div class="footer-column">
-                <h3>Resources</h3>
-                <div class="footer-links">
-                    <a href="#">Blog</a>
-                    <a href="#">Tutorials</a>
-                    <a href="#">Documentation</a>
-                    <a href="#">Community</a>
-                    <a href="#">Asset Standards</a>
-                </div>
+            <div class="site-footer__column">
+                <h3 class="site-footer__heading">Explore</h3>
+                <ul class="site-footer__links">
+                    <li><a href="#featuredSlider" class="site-footer__link">Spotlight Assets</a></li>
+                    <li><a href="#" class="site-footer__link" id="footerNewAdditionsLink">New Additions</a></li>
+                    <li><a href="#categoriesSection" class="site-footer__link">All Categories</a></li>
+                    <li><a href="#" class="site-footer__link">Popular Tags</a></li>
+                </ul>
             </div>
-            <div class="footer-column">
-                <h3>Support</h3>
-                <div class="footer-links">
-                    <a href="#">Help Center</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">Report an Issue</a>
-                    <a href="#">Request a Feature</a>
-                </div>
+            <div class="site-footer__column">
+                <h3 class="site-footer__heading">Community</h3>
+                <ul class="site-footer__links">
+                    <li><a href="#" class="site-footer__link">Forums</a></li>
+                    <li><a href="#" class="site-footer__link">Tutorials & Resources</a></li>
+                    <li><a href="#" class="site-footer__link">Become a Contributor</a></li>
+                    <li><a href="#" class="site-footer__link">Asset Guidelines</a></li>
+                </ul>
             </div>
-            <div class="footer-column">
-                <h3>Company</h3>
-                <div class="footer-links">
-                    <a href="#">About Us</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Copyright</a>
-                </div>
+            <div class="site-footer__column">
+                <h3 class="site-footer__heading">Support</h3>
+                <ul class="site-footer__links">
+                    <li><a href="#" class="site-footer__link">Help Center / FAQ</a></li>
+                    <li><a href="#" class="site-footer__link">Contact Us</a></li>
+                    <li><a href="#" class="site-footer__link">Terms of Service</a></li>
+                    <li><a href="#" class="site-footer__link">Privacy Policy</a></li>
+                </ul>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 ModelVerse. All rights reserved.</p>
+        <div class="site-footer__copyright">
+            <p>© <span id="currentYearFooter">2025</span> ModelHub Pro. All rights reserved. Assets are property of their respective creators.</p>
         </div>
     </footer>
   <script src="script.js"></script>
